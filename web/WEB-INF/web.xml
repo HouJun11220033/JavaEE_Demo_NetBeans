@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <!--	<context-param>
+                    <param-name>dirver</param-name>
+                    <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://127.0.0.1:3306/cs</param-value>
+    </context-param>
+    <context-param>
+            <param-name>user</param-name>
+            <param-value>root</param-value>
+    </context-param>
+    <context-param>
+            <param-name>pass</param-name>
+            <param-value>root</param-value>
+    </context-param>
+    -->
+    <servlet>
+        <servlet-name>config</servlet-name>
+        <jsp-file>/configTest.jsp</jsp-file>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>Houjun</param-value>
+        </init-param>
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>22</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>TimerServlet</servlet-name>
+        <servlet-class>com.servlet.TimerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>config</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>firstServlet</servlet-name>
+        <servlet-class>com.servlet.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        <url-pattern>/firstServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>acceptUserRegist</servlet-name>
+        <servlet-class>com.servlet.AcceptUserRegist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>acceptUserRegist</servlet-name>
+        <url-pattern>/acceptUserRegist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimerServlet</servlet-name>
+        <url-pattern>/TimerServlet</url-pattern>
+    </servlet-mapping>
+    <!--    <listener>
+        <listener-class>com.listenerTest.GetConnListener</listener-class>
+    </listener>-->
+
+</web-app>
