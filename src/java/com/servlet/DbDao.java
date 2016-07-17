@@ -1,116 +1,108 @@
 package com.servlet;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DbDao {
 
-    public Connection conn;
-    public String driver;
-    public String url;
-    public String username;
-    public String pass;
+    private Connection conn;
+    private String driver;
+    private String url;
+    private String username;
+    private String pass;
 
     public DbDao() {
     }
 
-    public String getDriver() {
-        return driver;
+    public DbDao(String driver, String url, String username, String pass) {
+        this.driver = driver;
+        this.url = url;
+        this.username = username;
+        this.pass = pass;
     }
+    //下面是各个成员属性的setter和getter方法
 
     public void setDriver(String driver) {
         this.driver = driver;
-    }
-
-    public String getUrl() {
-        return url;
     }
 
     public void setUrl(String url) {
         this.url = url;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPass() {
-        return pass;
     }
 
     public void setPass(String pass) {
         this.pass = pass;
     }
 
-    public DbDao(String driver, String url, String username, String pass) throws ClassNotFoundException, SQLException {
-        // this.conn=conn;
-        this.driver = driver;
-        this.pass = pass;
-        this.username = username;
-        this.url = url;
-//        Class.forName(driver);
-//        Statement stmt = conn.createStatement();
+    public String getDriver() {
+        return (this.driver);
     }
 
-    public Connection getConnection() throws SQLException, ClassNotFoundException {
+    public String getUrl() {
+        return (this.url);
+    }
+
+    public String getUsername() {
+        return (this.username);
+    }
+
+    public String getPass() {
+        return (this.pass);
+    }
+    //获取数据库连接
+
+    public Connection getConnection() throws Exception {
         if (conn == null) {
             Class.forName(this.driver);
-            conn = DriverManager.getConnection(url, username, pass);
-
+            conn = DriverManager.getConnection(url, username,
+                    this.pass);
         }
-
         return conn;
     }
+    //插入记录
 
-    public boolean insert(String sql,Object... args) throws SQLException, ClassNotFoundException {
+    public boolean insert(String sql, Object... args)
+            throws Exception {
         PreparedStatement pstmt = getConnection().prepareStatement(sql);
-        for(int i=0;i<args.length;i++)
-        {
-            pstmt.setObject(i+1,args[i]);
+        for (int i = 0; i < args.length; i++) {
+            pstmt.setObject(i + 1, args[i]);
         }
-        
-        if(pstmt.executeUpdate()!=1)
-        {
+        if (pstmt.executeUpdate() != 1) {
             return false;
         }
+        pstmt.close();
         return true;
-
     }
+    //执行查询
 
-    public ResultSet query(String sql,Object... args) throws SQLException, ClassNotFoundException {
-        PreparedStatement pstmt=getConnection().prepareStatement(sql);
-        for(int i=0;i<args.length;i++)
-        {
-            pstmt.setObject(i+1,args[i]);
+    public ResultSet query(String sql, Object... args)
+            throws Exception {
+        PreparedStatement pstmt = getConnection().prepareStatement(sql);
+        for (int i = 0; i < args.length; i++) {
+            pstmt.setObject(i + 1, args[i]);
         }
         return pstmt.executeQuery();
-        
     }
+    //执行修改
 
-    public void modify(String sql,Object... args) throws SQLException, ClassNotFoundException {
-        try (PreparedStatement pstmt = getConnection().prepareStatement(sql)) {
-            for(int i=0;i<args.length;i++)
-            {
-                pstmt.setObject(i+1, args[i]);
-            }
-            pstmt.executeUpdate();
+    public void modify(String sql, Object... args)
+            throws Exception {
+        PreparedStatement pstmt = getConnection().prepareStatement(sql);
+        for (int i = 0; i < args.length; i++) {
+            pstmt.setObject(i + 1, args[i]);
         }
-
+        pstmt.executeUpdate();
+        pstmt.close();
     }
+    //关闭数据库连接的方法
 
-    public void close() throws SQLException {
-        if(conn!=null && !conn.isClosed())
-        {
+    public void closeConn()
+            throws Exception {
+        if (conn != null && !conn.isClosed()) {
             conn.close();
         }
     }
-
 }

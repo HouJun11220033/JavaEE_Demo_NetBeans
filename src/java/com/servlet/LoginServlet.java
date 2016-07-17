@@ -8,6 +8,8 @@ package com.servlet;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,11 +50,12 @@ public class LoginServlet extends HttpServlet {
             } else {
                 errMsg += "Your username not exists!";
             }
-        } catch (ClassNotFoundException | SQLException | ServletException | IOException e) {
+        } catch (Exception ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (errMsg != null && !errMsg.equals("")) {
             rd = request.getRequestDispatcher("/login.jsp");
-            request.setAttribute("err",errMsg);
+            request.setAttribute("err", errMsg);
             rd.forward(request, response);
         }
 

@@ -17,12 +17,12 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(filterName = "authorityFilter", urlPatterns = {"/*"}, initParams = {
-    @WebInitParam(name = "encoding", value = "GBK"),
-    @WebInitParam(name = "loginPage", value = "/login.jsp"),
-    @WebInitParam(name = "proLogin", value = "/proLogin.jsp")
-}
-)
+//@WebFilter(filterName = "authorityFilter", urlPatterns = {"/*"}, initParams = {
+//    @WebInitParam(name = "encoding", value = "GBK"),
+//    @WebInitParam(name = "loginPage", value = "/login.jsp"),
+//    @WebInitParam(name = "proLogin", value = "/proLogin.jsp")
+//}
+//)
 //@WebFilter(filterName="xxx",urlPatterns={"xxx"},initParams={@WebInitParam(name="xxx",value="xxx")})
 public class AuthorityFilter implements Filter {
 
