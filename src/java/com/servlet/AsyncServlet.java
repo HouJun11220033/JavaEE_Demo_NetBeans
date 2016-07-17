@@ -23,7 +23,7 @@ public class AsyncServlet extends HttpServlet {
         actx.addListener(new MyAsyncListener());
         actx.setTimeout(30*1000);
         actx.start(new Executor(actx) {});
-        out.println("结束Servlet的时间：" 
+        out.println("结束Servlet的时间：！！！" 
 			+ new java.util.Date() + ".<br/>");
         out.flush();
         
