@@ -3,21 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/web/online.jsp</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/listenerTest/MyAsyncListener.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/filterTest/LogFilter.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/listenerTest/RequestListener.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/servlet/DbDao.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/filterTest/AuthorityFilter.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/listenerTest/OnlineListener.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/servlet/AsyncServlet.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/servlet/Executor.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/servlet/LoginServlet.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/web/useTagFile.jsp</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/web/proLogin.jsp</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/web/WEB-INF/tags/iterator.tag</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/src/java/com/listenerTest/GetConnListener.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/web/async.jsp</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/web/form2.jsp</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>
