@@ -1,0 +1,127 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:62), pid=8460, tid=7956
+#
+# JRE version:  (8.0_31-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.31-b07 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000025d3800):  JavaThread "Unknown thread" [_thread_in_vm, id=7956, stack(0x00000000024d0000,0x00000000025d0000)]
+
+Stack: [0x00000000024d0000,0x00000000025d0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3169ba]
+V  [jvm.dll+0x2674c3]
+V  [jvm.dll+0x268103]
+V  [jvm.dll+0x25f8f5]
+V  [jvm.dll+0x5bcb4]
+V  [jvm.dll+0xe450e]
+V  [jvm.dll+0x1fa017]
+V  [jvm.dll+0x22b694]
+V  [jvm.dll+0x14d8c1]
+C  [java.exe+0x20b6]
+C  [java.exe+0xc9bb]
+C  [java.exe+0xca4f]
+C  [KERNEL32.DLL+0x18102]
+C  [ntdll.dll+0x5c2e4]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000025d3800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7956, stack(0x00000000024d0000,0x00000000025d0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6906d0000 - 0x00007ff690704000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\java.exe
+0x00007ff914670000 - 0x00007ff914831000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ff914170000 - 0x00007ff91421d000 	C:\windows\system32\KERNEL32.DLL
+0x00007ff911640000 - 0x00007ff911828000 	C:\windows\system32\KERNELBASE.dll
+0x00007ff913070000 - 0x00007ff913117000 	C:\windows\system32\ADVAPI32.dll
+0x00007ff912fd0000 - 0x00007ff91306d000 	C:\windows\system32\msvcrt.dll
+0x00007ff9132d0000 - 0x00007ff91332b000 	C:\windows\system32\sechost.dll
+0x00007ff914350000 - 0x00007ff91446c000 	C:\windows\system32\RPCRT4.dll
+0x00007ff913a70000 - 0x00007ff913bc6000 	C:\windows\system32\USER32.dll
+0x00007ff9144d0000 - 0x00007ff914656000 	C:\windows\system32\GDI32.dll
+0x00007ff90d0d0000 - 0x00007ff90d344000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\COMCTL32.dll
+0x00007ff9134b0000 - 0x00007ff91372d000 	C:\windows\system32\combase.dll
+0x00007ff911a00000 - 0x00007ff911a6a000 	C:\windows\system32\bcryptPrimitives.dll
+0x00007ff914220000 - 0x00007ff91425b000 	C:\windows\system32\IMM32.DLL
+0x0000000051060000 - 0x0000000051132000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\msvcr100.dll
+0x00000000777a0000 - 0x0000000077ffa000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\server\jvm.dll
+0x00007ff914660000 - 0x00007ff914668000 	C:\windows\system32\PSAPI.DLL
+0x00007ff90ed60000 - 0x00007ff90ed83000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ff90eb80000 - 0x00007ff90eb89000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ff913a00000 - 0x00007ff913a6b000 	C:\windows\system32\WS2_32.dll
+0x00007ff90ed30000 - 0x00007ff90ed5c000 	C:\windows\SYSTEM32\winmmbase.dll
+0x00007ff910d20000 - 0x00007ff910d63000 	C:\windows\system32\cfgmgr32.dll
+0x0000000051010000 - 0x000000005101f000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\verify.dll
+0x0000000050fe0000 - 0x0000000051008000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\java.dll
+0x0000000050fc0000 - 0x0000000050fd6000 	C:\Program Files\Java\jdk1.8.0_31\jre\bin\zip.dll
+0x00007ff8f1410000 - 0x00007ff8f159c000 	C:\windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+java_command: org.netbeans.modules.web.project.ant.JspCSingle -uriroot F:\NetBeansProjects\JavaEE_bookDemo\JavaEE_bookDemo\build\web -d F:\NetBeansProjects\JavaEE_bookDemo\JavaEE_bookDemo\build\generated\src -die1 -schemas /resources/schemas/ -dtds /resources/dtds/ -sysClasspath F:\Win 10\NB 8.1\NetBeans 8.1\extide\ant\lib\ant.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\glassfish-jspparser-4.0.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\jstl-impl.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar -jspc.files F:\NetBeansProjects\JavaEE_bookDemo\JavaEE_bookDemo\build\web\upLoad_1.jsp -compilerSourceVM 1.8 -compilerTargetVM 1.8 -javaEncoding UTF-8
+java_class_path (initial): C:\Program Files\Java\jdk1.8.0_31\lib\tools.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\ant\extra\jspcompile.jar;F:\Win 10\NB 8.1\NetBeans 8.1\extide\ant\lib\ant.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\glassfish-jspparser-4.0.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar;F:\Win 10\NB 8.1\NetBeans 8.1\enterprise\modules\ext\jstl-api.jar;F:\Win 10\NB 8.1\NetBeans 8.1\extide\ant\lib\ant-launcher.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_31
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_31\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_31\lib\tools.jar;C:\Program Files\Apache Software Foundation\Tomcat 7.0\bin\bin;C:\Program Files\Apache Software Foundation\Tomcat 7.0\bin\lib;F:\Ant\bin
+PATH=C:\ProgramData\Oracle\Java\javapath;F:\Win 10\Python;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;F:\Win 10\SQL Server 2008 R2\100\Tools\Binn\;F:\Win 10\SQL Server 2008 R2\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Java\jdk1.8.0_31\bin;C:\Program Files (x86)\MacType;C:\Program Files\Java\jre1.8.0_31\bin;F:\Win 10\Dev-Cpp\MinGW64\bin;F:\Ant\bin;C:\Users\Administrator\AppData\Local\atom\bin
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 4108652k(599860k free), swap 6205804k(4268k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.31-b07) for windows-amd64 JRE (1.8.0_31-b13), built on Dec 17 2014 21:00:28 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Jul 18 23:26:55 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
