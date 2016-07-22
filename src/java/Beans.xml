@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-    <bean id="beanTeamplate" abstract="true">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:annotation-config/>
+<!--    <bean id="beanTeamplate" abstract="true">
         <property name="message1" value="Hello Spring"/>
         <property name="message2" value="Hello JavaEE"/>
         <property name="message3" value="Hello PAT"/>
             
-    </bean>
+    </bean>-->
 
-    <bean id="helloworld" class="com.spring.hellospring.HelloWorld">
+<!--    <bean id="helloworld" class="com.spring.hellospring.HelloWorld">
      <property name="message1" value="Hello World!!!"/>
      <property name="message2" value="Hello World!!!"/>
         
-    </bean>
+    </bean>-->
 <!--    <bean id="helloworld_1" class="com.spring.hellospring.HelloWorld" lazy-init="true" init-method="init" destroy-method="destory" scope="singleton">
         <property name="message1" value="Hello World!!!"/>
         <property name="message2" value="Hello World!!!"/>
         
     </bean>-->
-    <bean id="hellochina" class="com.spring.hellospring.HelloChina" parent="helloworld">
+<!--    <bean id="hellochina" class="com.spring.hellospring.HelloChina" parent="helloworld">
         <property name="message1" value="Hello World!!!"/>
         <property name="message2" value="Hello Spring"/>
         <property name="message3" value="Hello World!!!"/>
     
-    </bean>
-    <bean class="com.spring.hellospring.InitHelloWorld"/>
-    <bean id="textEditor" class="com.spring.hellospring.TextEditor">
-        <property name="spellChecker">
+    </bean>-->
+<!--    <bean class="com.spring.hellospring.InitHelloWorld"/>-->
+<!--    <bean id="textEditor" class="com.spring.hellospring.TextEditor">
+                <property name="spellChecker">
             <bean id="spellChecker" class="com.spring.hellospring.SpellChecker"></bean>
         </property>
-    </bean>
-    <bean id="javaCollection" class="com.spring.hellospring.JavaCollection">
+        <constructor-arg name="name" value="Generic Text Editor"/>
+    </bean>-->
+<!--    <bean id="spellChecker" class="com.spring.hellospring.SpellChecker"></bean>-->
+<!--    <bean id="javaCollection" class="com.spring.hellospring.JavaCollection">
         <property name="addrList">
             <list>
                 <value>INDIA</value>
@@ -74,8 +80,18 @@
             
         </property>
             
-           
-        
+               </bean>
+    -->        
+    
+    <bean id="student1" class="com.spring.hellospring.Student">
+        <property name="name"  value="Zara" />
+        <property name="age"  value="11"/>
+    </bean>
+    <bean id="student2" class="com.spring.hellospring.Student">
+        <property name="name"  value="Nuha" />
+        <property name="age"  value="2"/>
+    </bean>
+    <bean id="profile" class="com.spring.hellospring.Profile">
     </bean>
 
 </beans>

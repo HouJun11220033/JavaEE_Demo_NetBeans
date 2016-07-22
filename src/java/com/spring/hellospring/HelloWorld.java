@@ -1,5 +1,8 @@
 package com.spring.hellospring;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class HelloWorld {
 
     private String message1;
@@ -20,14 +23,14 @@ public class HelloWorld {
     public void setMessage2(String message2) {
         this.message2 = message2;
     }
-
-    
-    public void init() {
-        System.out.println("Init . . . . .");
-    }
-
-    public void destory() {
-        System.out.println("Destory . . . . .");
-    }
+//
+//    @PostConstruct
+//    public void init() {
+//        System.out.println("Init . . . . .");
+//    }
+//    @PreDestroy
+//    public void destory() {
+//        System.out.println("Destory . . . . .");
+//    }
 
 }
