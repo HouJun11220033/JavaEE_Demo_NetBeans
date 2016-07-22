@@ -15,11 +15,18 @@
             
     </bean>-->
 
-<!--    <bean id="helloworld" class="com.spring.hellospring.HelloWorld">
+    <bean id="helloworld" class="com.spring.hellospring.HelloWorld">
      <property name="message1" value="Hello World!!!"/>
      <property name="message2" value="Hello World!!!"/>
         
-    </bean>-->
+    </bean>
+    <bean id="cStartEventHandler" class="com.spring.hellospring.CStartEventHandler"/>
+    <bean id="cStopEventHandler" class="com.spring.hellospring.CStopEventHandler"/>
+    <bean id="customEventHandler" 
+      class="com.spring.hellospring.CustomEventHandler"/>
+
+   <bean id="customEventPublisher" 
+      class="com.spring.hellospring.CustomEventPublisher"/>
 <!--    <bean id="helloworld_1" class="com.spring.hellospring.HelloWorld" lazy-init="true" init-method="init" destroy-method="destory" scope="singleton">
         <property name="message1" value="Hello World!!!"/>
         <property name="message2" value="Hello World!!!"/>
@@ -82,7 +89,7 @@
             
                </bean>
     -->        
-    
+<!--    
     <bean id="student1" class="com.spring.hellospring.Student">
         <property name="name"  value="Zara" />
         <property name="age"  value="11"/>
@@ -92,6 +99,6 @@
         <property name="age"  value="2"/>
     </bean>
     <bean id="profile" class="com.spring.hellospring.Profile">
-    </bean>
+    </bean>-->
 
 </beans>

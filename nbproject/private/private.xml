@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/JavaCollection.java</file>
-            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/InitHelloWorld.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/HelloWorldConfig.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/Profile.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/TextEditorConfig.java</file>
             <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/MainApp.java</file>
             <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/Beans.xml</file>
             <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/TextEditor.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/HelloWorld.java</file>
             <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/SpellChecker.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_bookDemo/JavaEE_bookDemo/src/java/com/spring/hellospring/Student.java</file>
         </group>
     </open-files>
 </project-private>
