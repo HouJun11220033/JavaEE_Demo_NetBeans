@@ -1,11 +1,18 @@
 package com.spring.hellospring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 public class Student {
 
     private Integer age;
     private String name;
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     //@Autowired(required = false)
     public Integer getAge() {

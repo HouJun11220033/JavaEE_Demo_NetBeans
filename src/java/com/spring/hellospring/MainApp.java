@@ -1,15 +1,37 @@
 package com.spring.hellospring;
 
+import java.util.List;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
 
     public static void main(String[] args) {
-       // ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        // ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         ApplicationContext ac = new ClassPathXmlApplicationContext("Beans.xml");
+        StudentJDBCTemplate studentJDBCTemplate = (StudentJDBCTemplate) ac.getBean("studentJDBCTemplate");
+        System.out.println("---------------------Records Creation----------------------------");
+        studentJDBCTemplate.create("Zara", 11, 99, 2010);
+        studentJDBCTemplate.create("Nuha", 20, 97, 2010);
+        studentJDBCTemplate.create("Ayan", 25, 100, 2011);
+        System.out.println("--------------------------Listing Multiple Records----------------------------");
+        List<StudentMarks> studentMarks = studentJDBCTemplate.listStudents();
+        for (StudentMarks record : studentMarks) {
+            System.out.print("ID : " + record.getId());
+            System.out.print(", Name : " + record.getName());
+            System.out.print(", Marks : " + record.getMarks());
+            System.out.print(", Year : " + record.getYear());
+            System.out.println(", Age : " + record.getAge());
+
+        }
+//        System.out.println("----Updating Record with ID = 2 -----");
+//        studentJDBCTemplate.update(2, 20);
+//        System.out.println("------------------------Listing Record with ID = 2 -------------------------");
+//        Student student = studentJDBCTemplate.getStudent(2);
+//        System.out.print("ID : " + student.getId());
+//        System.out.print(", Name : " + student.getName());
+//        System.out.println(", Age : " + student.getAge());
+
 //        ApplicationContext ac_1 = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
 //        ApplicationContext ac_2 = new AnnotationConfigApplicationContext(TextEditorConfig.class);
         //AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
@@ -24,17 +46,16 @@ public class MainApp {
         //  HelloChina hc_1 = (HelloChina) context.getBean("hellochina");
         //  HelloWorld helloworld = ac_1.getBean(HelloWorld.class);
         //  TextEditor te = ac_2.getBean(TextEditor.class);
-
         //  TextEditor te = (TextEditor) ac.getBean("textEditor");
         //  helloworld.setMessage1("Hello World!");
         //  helloworld.getMessage1();
         //  context.stop();
         // Profile pro=(Profile) ac.getBean("profile");
         //  JavaCollection jc = (JavaCollection) ac.getBean("javaCollection");
-        Student stu = (Student) ac.getBean("student");
-        stu.getName();
-        stu.getAge();
-        stu.printThrowException();
+        // Student stu = (Student) ac.getBean("student");
+//        stu.getName();
+//        stu.getAge();
+//        stu.printThrowException();
         // hw.setMessage("I am object hw");
         //hw.destory();
         //  hw.getMessage();
