@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,13 +13,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
     <context:annotation-config/>
-<!--    <bean id="beanTeamplate" abstract="true">
+    <bean id="beanTeamplate" abstract="true">
         <property name="message1" value="Hello Spring"/>
         <property name="message2" value="Hello JavaEE"/>
         <property name="message3" value="Hello PAT"/>
             
-    </bean>-->
-<!--    <aop:config>
+    </bean>
+    <aop:config>
         <aop:aspect id="log" ref="logging">
             pointcut里面存的是一组方法
             <aop:pointcut id="selectAll" expression="execution(* com.spring.hellospring.*.*(..))"/>
@@ -32,45 +32,45 @@
             throwing="ex"/>
         </aop:aspect>
                      
-    </aop:config>-->
-<!--    <bean id="logging" class="com.spring.hellospring.Logging"/> -->
-<!--
+    </aop:config>
+    <bean id="logging" class="com.spring.hellospring.Logging"/> 
+
     <bean id="helloworld" class="com.spring.hellospring.HelloWorld">
      <property name="message1" value="Hello World!!!"/>
      <property name="message2" value="Hello World!!!"/>
         
-    </bean>-->
-<!--   <bean id="student" class="com.spring.hellospring.Student">
+    </bean>
+   <bean id="student" class="com.spring.hellospring.Student">
       <property name="name"  value="Zara" />
       <property name="age"  value="11"/>      
-   </bean>-->
-<!--    <bean id="cStartEventHandler" class="com.spring.hellospring.CStartEventHandler"/>
+   </bean>
+    <bean id="cStartEventHandler" class="com.spring.hellospring.CStartEventHandler"/>
     <bean id="cStopEventHandler" class="com.spring.hellospring.CStopEventHandler"/>
     <bean id="customEventHandler" 
       class="com.spring.hellospring.CustomEventHandler"/>
 
    <bean id="customEventPublisher" 
-      class="com.spring.hellospring.CustomEventPublisher"/>-->
-<!--    <bean id="helloworld_1" class="com.spring.hellospring.HelloWorld" lazy-init="true" init-method="init" destroy-method="destory" scope="singleton">
+      class="com.spring.hellospring.CustomEventPublisher"/>
+    <bean id="helloworld_1" class="com.spring.hellospring.HelloWorld" lazy-init="true" init-method="init" destroy-method="destory" scope="singleton">
         <property name="message1" value="Hello World!!!"/>
         <property name="message2" value="Hello World!!!"/>
         
-    </bean>-->
-<!--    <bean id="hellochina" class="com.spring.hellospring.HelloChina" parent="helloworld">
+    </bean>
+    <bean id="hellochina" class="com.spring.hellospring.HelloChina" parent="helloworld">
         <property name="message1" value="Hello World!!!"/>
         <property name="message2" value="Hello Spring"/>
         <property name="message3" value="Hello World!!!"/>
     
-    </bean>-->
-<!--    <bean class="com.spring.hellospring.InitHelloWorld"/>-->
-<!--    <bean id="textEditor" class="com.spring.hellospring.TextEditor">
+    </bean>
+    <bean class="com.spring.hellospring.InitHelloWorld"/>
+    <bean id="textEditor" class="com.spring.hellospring.TextEditor">
                 <property name="spellChecker">
             <bean id="spellChecker" class="com.spring.hellospring.SpellChecker"></bean>
         </property>
         <constructor-arg name="name" value="Generic Text Editor"/>
-    </bean>-->
-<!--    <bean id="spellChecker" class="com.spring.hellospring.SpellChecker"></bean>-->
-<!--    <bean id="javaCollection" class="com.spring.hellospring.JavaCollection">
+    </bean>
+    <bean id="spellChecker" class="com.spring.hellospring.SpellChecker"></bean>
+    <bean id="javaCollection" class="com.spring.hellospring.JavaCollection">
         <property name="addrList">
             <list>
                 <value>INDIA</value>
@@ -112,8 +112,8 @@
         </property>
             
                </bean>
-    -->        
-    <!--    
+            
+        
     <bean id="student1" class="com.spring.hellospring.Student">
         <property name="name"  value="Zara" />
         <property name="age"  value="11"/>
@@ -124,7 +124,7 @@
     </bean>
 
     <bean id="profile" class="com.spring.hellospring.Profile">
-    </bean>-->
+    </bean>
     
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -151,8 +151,8 @@
     </bean>
     <bean id="studentJDBCTemplate" class="com.spring.hellospring.StudentJDBCTemplate">
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="transactionManager" ref="transactionManager"/>-->
+        <property name="transactionManager" ref="transactionManager"/>
     
     </bean>
 
-</beans>
+</beans>-->

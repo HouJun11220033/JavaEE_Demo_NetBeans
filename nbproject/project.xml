@@ -19,10 +19,6 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${libs.spring-framework400.classpath}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
-                <library dirs="200">
                     <file>${libs.jstl.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -50,6 +46,18 @@
                     <file>${file.reference.mysql-connector-java-5.1.7-bin.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+                <library dirs="200">
+                    <file>${file.reference.org.springframework.web.servlet-3.0.5.RELEASE.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.org.springframework.asm-3.0.5.RELEASE.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.spring-framework400.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
@@ -61,13 +69,20 @@
         </data>
         <spring-data xmlns="http://www.netbeans.org/ns/spring-data/1">
             <config-files>
-                <config-file>web/WEB-INF/applicationContext.xml</config-file>
                 <config-file>web/WEB-INF/dispatcher-servlet.xml</config-file>
+                <config-file>web/WEB-INF/applicationContext.xml</config-file>
+                <config-file>web/WEB-INF/applicationContext_1.xml</config-file>
+                <config-file>web/WEB-INF/dispatcher-servlet_1.xml</config-file>
             </config-files>
             <config-file-groups>
                 <config-file-group name="Default Group">
                     <config-file>web/WEB-INF/applicationContext.xml</config-file>
                     <config-file>web/WEB-INF/dispatcher-servlet.xml</config-file>
+                </config-file-group>
+                <config-file-group name="Default Group"/>
+                <config-file-group name="Default Group">
+                    <config-file>web/WEB-INF/applicationContext_1.xml</config-file>
+                    <config-file>web/WEB-INF/dispatcher-servlet_1.xml</config-file>
                 </config-file-group>
             </config-file-groups>
         </spring-data>

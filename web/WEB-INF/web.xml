@@ -1,90 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-    <!--	<context-param>
-                    <param-name>dirver</param-name>
-                    <param-value>com.mysql.jdbc.Driver</param-value>
-    </context-param>
-    <context-param>
-            <param-name>url</param-name>
-            <param-value>jdbc:mysql://127.0.0.1:3306/cs</param-value>
-    </context-param>
-    <context-param>
-            <param-name>user</param-name>
-            <param-value>root</param-value>
-    </context-param>
-    <context-param>
-            <param-name>pass</param-name>
-            <param-value>root</param-value>
-    </context-param>
-    -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
-    </context-param>
-    <filter>
-        <filter-name>struts2</filter-name>
-        <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>struts2</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>Spring MVC Application</display-name>
+
     <servlet>
-        <servlet-name>config</servlet-name>
-        <jsp-file>/configTest.jsp</jsp-file>
-        <init-param>
-            <param-name>name</param-name>
-            <param-value>Houjun</param-value>
-        </init-param>
-        <init-param>
-            <param-name>age</param-name>
-            <param-value>22</param-value>
-        </init-param>
+        <servlet-name>HelloWeb</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet>
-        <servlet-name>TimerServlet</servlet-name>
-        <servlet-class>com.servlet.TimerServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>dispatcher</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>2</load-on-startup>
-    </servlet>
+
     <servlet-mapping>
-        <servlet-name>config</servlet-name>
-        <url-pattern>/config</url-pattern>
+        <servlet-name>HelloWeb</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>firstServlet</servlet-name>
-        <servlet-class>com.servlet.FirstServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>firstServlet</servlet-name>
-        <url-pattern>/firstServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>acceptUserRegist</servlet-name>
-        <servlet-class>com.servlet.AcceptUserRegist</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>acceptUserRegist</servlet-name>
-        <url-pattern>/acceptUserRegist</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>TimerServlet</servlet-name>
-        <url-pattern>/TimerServlet</url-pattern>
-    </servlet-mapping>
-    <!--    <listener>
-        <listener-class>com.listenerTest.GetConnListener</listener-class>
-    </listener>-->
-    <servlet-mapping>
-        <servlet-name>dispatcher</servlet-name>
-        <url-pattern>*.htm</url-pattern>
-    </servlet-mapping>
-    <welcome-file-list>
-        <welcome-file>example/HelloWorld.jsp</welcome-file>
-    </welcome-file-list>
+ 
 </web-app>
