@@ -8,7 +8,7 @@
      </head>
      <body>
           <h1>Student Information</h1>
-          <form:form method="POST" action="/addStudent">
+          <form:form method="POST" action="/JavaEE_Demo/addStudent">
               <table>
                    <tr>
                         <td><form:label path="name">Name</form:label></td>

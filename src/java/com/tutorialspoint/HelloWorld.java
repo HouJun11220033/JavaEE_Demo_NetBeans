@@ -1,5 +1,6 @@
-package com.spring.hellospring;
+package com.tutorialspoint;
 
+import com.spring.hellospring.*;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
