@@ -21,7 +21,12 @@
 
                         </td>
                    </tr>
+                   <a href="root/helloworld?username=10&age=22">helloworld</a>
               </table>  
           </form:form>
+          <form:form method="POST" action="root/helloworld">
+              <input type="submit" value="Submit"/>
+          </form:form>
+          
      </body>
 </html>
