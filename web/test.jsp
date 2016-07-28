@@ -16,11 +16,12 @@
                Province:<input type="text" name="address.province"/><br>
                <input type="submit" value="Submit"/><br>
           </form>
-
+           <a href="springmvc/testMap">Test Map</a><br>
           <a href="springmvc/testPathVariable/123">Test PathVariable</a><br>
           <a href="springmvc/testAntPath/aaa/abc">Test AntPath</a><br>
           <a href="springmvc/testCookieValue">Test CookieValue</a><br>
           <a href="springmvc/testServletAPI">Test ServletAPI</a><br>
+          <a href="springmvc/testModelAndView">Test ModelAndView</a><br>
 
      </body>
 </html>

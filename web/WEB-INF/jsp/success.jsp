@@ -13,5 +13,8 @@
      </head>
      <body>
           <h1>Hello World!</h1>
+          Time: ${requestScope.time}
+          <br>
+          Names:${requestScope.names}
      </body>
 </html>
