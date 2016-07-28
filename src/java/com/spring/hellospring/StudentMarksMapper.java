@@ -1,5 +1,6 @@
 package com.spring.hellospring;
 
+import com.model.StudentMarks;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;

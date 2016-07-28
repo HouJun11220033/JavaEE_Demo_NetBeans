@@ -1,7 +1,7 @@
 package com.spring.controller;
 
 import com.spring.hellospring.SpringException;
-import com.spring.hellospring.Student;
+import com.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;

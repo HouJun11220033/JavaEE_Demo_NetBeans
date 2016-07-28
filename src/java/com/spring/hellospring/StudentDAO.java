@@ -1,5 +1,7 @@
 package com.spring.hellospring;
 
+import com.model.Student;
+import com.model.StudentMarks;
 import java.util.List;
 import javax.sql.DataSource;
 

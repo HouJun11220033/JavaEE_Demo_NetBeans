@@ -1,5 +1,6 @@
 package com.spring.hellospring;
 
+import com.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 

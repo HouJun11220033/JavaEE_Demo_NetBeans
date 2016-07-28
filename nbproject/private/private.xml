@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/NetBeansProjects/JavaEE_Demo/web/WEB-INF/HelloWorld-servlet.xml</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_Demo/web/test.jsp</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_Demo/src/java/com/model/Address.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_Demo/src/java/com/model/User.java</file>
+            <file>file:/F:/NetBeansProjects/JavaEE_Demo/src/java/com/spring/controller/Controller_1.java</file>
         </group>
     </open-files>
 </project-private>
