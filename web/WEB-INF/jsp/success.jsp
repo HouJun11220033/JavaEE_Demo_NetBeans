@@ -16,5 +16,10 @@
           Time: ${requestScope.time}
           <br>
           Names:${requestScope.names}
+          <br>
+          requestScope ${requestScope.user}
+          <br>
+           sessionScope ${sessionScope.user}
+          
      </body>
 </html>

@@ -14,13 +14,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes(value={"user"}, types = {String.class})
 @RequestMapping("/springmvc")
 public class Controller_1 {
 
     private static final String SUCCESS = "success";
+
+    @RequestMapping("/testSessionAttribute")
+    public String testSessionAttribute(Map<String,Object> map) {
+        User user = new User("Houjun", "123456", "Houjun@gmail.com", 20);
+        map.put("user", user);
+
+        return SUCCESS;
+    }
 
     @RequestMapping("/testMap")
     public String testMap(Map map) {

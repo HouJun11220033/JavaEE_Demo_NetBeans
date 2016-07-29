@@ -10,6 +10,14 @@ public class User {
     private String city;
     private String province;
 
+    public User(String username, String password, String email, int age) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.age = age;
+    }
+    
+
     public Address getAddress() {
         return address;
     }

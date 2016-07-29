@@ -22,6 +22,7 @@
           <a href="springmvc/testCookieValue">Test CookieValue</a><br>
           <a href="springmvc/testServletAPI">Test ServletAPI</a><br>
           <a href="springmvc/testModelAndView">Test ModelAndView</a><br>
+          <a href="springmvc/testSessionAttribute">Test SessionAttribute</a><br>
 
      </body>
 </html>
