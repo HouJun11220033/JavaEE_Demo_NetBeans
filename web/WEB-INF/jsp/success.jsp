@@ -1,10 +1,5 @@
-<%-- 
-    Document   : success
-    Created on : Jul 27, 2016, 10:39:49 AM
-    Author     : Sammy Guergachi <sguergachi at gmail.com>
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
      <head>
@@ -19,7 +14,16 @@
           <br>
           requestScope ${requestScope.user}
           <br>
-           sessionScope ${sessionScope.user}
-          
+          sessionScope ${sessionScope.user}
+          <br>
+          requestScope ${requestScope.school}
+          <br>
+          sessionScope ${sessionScope.school}
+          <br>
+          <fmt:message key="i18n.username"></fmt:message>
+          <br>
+          <fmt:message key="i18n.password"></fmt:message>
+
+
      </body>
 </html>
