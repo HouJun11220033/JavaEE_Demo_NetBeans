@@ -1,26 +1,29 @@
 package com.model;
 
+import java.util.Date;
+
 public class Employee {
 
-    private int id;
-    private String firstName;
-    private String lastName;
-    private int salary;
+    private Integer id;
 
-    public int getId() {
+    private String lastName;
+
+    private String email;
+    //1 male, 0 female
+    private Integer gender;
+
+    private Department department;
+
+    private Date birth;
+
+    private Float salary;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -31,22 +34,64 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public int getSalary() {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public Float getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Float salary) {
         this.salary = salary;
     }
 
-    public Employee(int id, String firstName, String lastName, int salary) {
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", lastName=" + lastName + ", email="
+                + email + ", gender=" + gender + ", department=" + department
+                + ", birth=" + birth + ", salary=" + salary + "]";
+    }
+
+    public Employee(Integer id, String lastName, String email, Integer gender,
+            Department department) {
+        super();
         this.id = id;
-        this.firstName = firstName;
         this.lastName = lastName;
-        this.salary = salary;
+        this.email = email;
+        this.gender = gender;
+        this.department = department;
     }
 
     public Employee() {
+        // TODO Auto-generated constructor stub
     }
-
 }
