@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.book.controller;
 
 import com.spring.hellospring.SpringException;
 import com.model.Student;

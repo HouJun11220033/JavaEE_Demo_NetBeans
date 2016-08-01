@@ -1,7 +1,7 @@
 package com.spring.hellospring;
 
-import com.tutorialspoint.HelloWorld;
-import java.util.List;
+
+import com.spring.tutorialspoint.model.HelloWorld;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

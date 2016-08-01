@@ -1,11 +1,9 @@
-package com.model;
+package com.spring.guigu.model;
 
 public class Department {
 
 	private Integer id;
 	private String departmentName;
-
-
 
 	public Department() {
 		// TODO Auto-generated constructor stub

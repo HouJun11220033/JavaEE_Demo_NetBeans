@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.guigu.controller;
 
 import com.model.User;
 import java.io.IOException;
@@ -23,10 +23,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class Controller_1 {
 
     private static final String SUCCESS = "success";
-    
+
     @RequestMapping("/testRedirect")
-    public String testRedirect()
-    {
+    public String testRedirect() {
         System.out.println("Test Redirect ! ! !");
         return "redirect:/test.jsp";
     }

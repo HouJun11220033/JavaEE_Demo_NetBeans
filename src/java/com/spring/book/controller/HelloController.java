@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.book.controller;
 
 import com.tutorialspoint.*;
 import org.springframework.stereotype.Controller;

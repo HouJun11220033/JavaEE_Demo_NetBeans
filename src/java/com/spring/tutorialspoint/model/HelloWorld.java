@@ -1,8 +1,4 @@
-package com.tutorialspoint;
-
-import com.spring.hellospring.*;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+package com.spring.tutorialspoint.model;
 
 public class HelloWorld {
 

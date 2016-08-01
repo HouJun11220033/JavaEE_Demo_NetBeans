@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.struts2.tutorialspoint;
 
 import java.util.*;
 import com.opensymphony.xwork2.ActionInvocation;

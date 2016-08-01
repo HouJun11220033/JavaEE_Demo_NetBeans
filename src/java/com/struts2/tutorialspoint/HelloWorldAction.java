@@ -1,4 +1,4 @@
-package com.tutorialspoint.struts2;
+package com.struts2.tutorialspoint;
 
 import com.opensymphony.xwork2.ActionSupport;
 

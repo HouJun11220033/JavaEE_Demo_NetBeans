@@ -1,7 +1,7 @@
-package com.dao;
+package com.spring.guigu.dao;
 
 
-import com.model.Department;
+import com.spring.guigu.model.Department;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
