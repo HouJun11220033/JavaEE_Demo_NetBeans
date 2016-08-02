@@ -38,7 +38,7 @@ public class EmployeeHandler {
 
     //表单回显
     @RequestMapping(value = "/emp/{id}", method = RequestMethod.GET)
-    public String input(@PathVariable("id") Integer id, Map<String, Object> map) {
+    public String dataReturn(@PathVariable("id") Integer id, Map<String, Object> map) {
         map.put("employee", employeeDao.get(id));
         map.put("departments", departmentDao.getDepartments());
         return "input";
@@ -57,10 +57,11 @@ public class EmployeeHandler {
         return "redirect:/emps";
 
     }
-
+    //转到input页面,并且给他准备好Map集合，以便输入时好相互对应
     @RequestMapping(value = "/emp", method = RequestMethod.GET)
-    public String input(Map<String, Object> map) {
+    public String getInputPage(Map<String, Object> map) {
         map.put("departments", departmentDao.getDepartments());
+        //往里面放employee时候，构造函数里面什么都没有
         map.put("employee", new Employee());
         return "input";
 
