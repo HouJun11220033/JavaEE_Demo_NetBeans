@@ -17,10 +17,11 @@
           </form>
           <br><br>
           <form:form action="${pageContext.request.contextPath }/emp" method="POST" modelAttribute="employee">
-
+              <form:errors path="*"></form:errors><br>
               <c:if test="${employee.id == null}">
 
                   LastName: <form:input path="lastName"/><br>
+                  <form:errors path="lastName"></form:errors><br>
               </c:if>
               <c:if test="${employee.id != null }">
                   <!--意思应该就是把这个ID留下来，防止重新提交-->
@@ -32,6 +33,7 @@
                   --%>
               </c:if>
               Email:<form:input path="email"/><br>
+              <form:errors path="email"></form:errors>
               <%
                   Map<String, String> genders = new HashMap();
                   genders.put("1", "Male");
@@ -42,7 +44,13 @@
               %>
               Gender:<form:radiobuttons path="gender" items="${genders}" delimiter="<br>"/><br>
               Department:<form:select path="department.id" items="${departments}" itemLabel="departmentName" itemValue="id"></form:select><br>
-                  <input type="submit" value="Submit"/>
+              Birth: <form:input path="birth"/>
+              <form:errors path="birth"></form:errors>
+
+              <br>
+              Salary: <form:input path="salary"/>
+              <br>
+              <input type="submit" value="Submit"/>
           </form:form>
      </body>
 </html>

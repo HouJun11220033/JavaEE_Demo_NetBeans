@@ -1,5 +1,6 @@
 package com.hibernate.tutorialspoint.main;
 
+
 import com.hibernate.tutorialspoint.pojo.Employee;
 import java.util.List;
 import java.util.Iterator;
@@ -9,7 +10,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
 
 public class ManageEmployee {
 
@@ -17,9 +17,7 @@ public class ManageEmployee {
 
     public static void main(String[] args) {
         try {
-            ServiceRegistry serviceRegistry = null;
-
-            factory = new Configuration().configure().buildSessionFactory(serviceRegistry);
+            factory = new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
            // throw new ExceptionInInitializerError(ex);

@@ -7,6 +7,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
+        <property name="javax.persistence.validation.mode">none</property>
         <mapping resource="com/hibernate/tutorialspoint/pojo/Employee.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

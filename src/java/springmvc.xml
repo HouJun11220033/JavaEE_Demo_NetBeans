@@ -19,12 +19,17 @@
     <mvc:default-servlet-handler/>
     <!-- 配置 ConversionService -->
     <bean id="conversionService"
-              class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <set>
                 <ref bean="employeeConverter"/>
             </set>
         </property>	
+    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n"></property>
+        
+        
     </bean>
     
     
