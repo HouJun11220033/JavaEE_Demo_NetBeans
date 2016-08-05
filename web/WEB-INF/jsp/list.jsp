@@ -24,7 +24,7 @@
                       $("form").attr("action", href).submit();
                       return false;
                   });
-              })
+              });
           </script>
      </head>
      <body>

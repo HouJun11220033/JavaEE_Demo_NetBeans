@@ -37,21 +37,35 @@
         <property name="maxUploadSize" value="1024000"></property>
          
     </bean>
-    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="i18n"></property>
+    
+
         
-    </bean>
+        
+    <!--拦截器-->
+        
+    
     <bean id="localResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
     </bean>
     <mvc:interceptors>
-        <bean class="com.atguigu.springmvc.interceptors.FirstInterceptor"></bean>
+        <!--        <bean class="com.spring.guigu.interceptor.FirstInterceptor"></bean>-->
         <!-- 配置 LocaleChanceInterceptor -->
-        <bran class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bran>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+<!--        <mvc:interceptor>
+            <mvc:mapping path="/emp"/>
+            <bean class="com.spring.guigu.interceptor.FirstInterceptor"/>
+           
+        </mvc:interceptor>-->
             
         <mvc:interceptor>
+            <mvc:mapping path="/emps"/>
+          
+            <!--            <mvc:mapping path="/**"/>-->
+             <mvc:exclude-mapping path="/emp"/> 
+            <bean class="com.spring.guigu.interceptor.SecondInterceptor"></bean>
             
         </mvc:interceptor>
     </mvc:interceptors>
+    <mvc:view-controller path="/i18n2" view-name="i18n2"/>
     
     
     
