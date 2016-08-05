@@ -34,6 +34,10 @@
           <a href="springmvc/testViewAndViewResolver">Test ViewAndViewResolver</a><br>
           <a href="springmvc/testView">Test View</a><br>
           <a href="springmvc/testRedirect">Test Redirect</a><br><br>
+          <h3>国际化测试</h3>
+          <br>
+          <a href="i18n">I18N PAGE</a>
+
 
 
      </body>

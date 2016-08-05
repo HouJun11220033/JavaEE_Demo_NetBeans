@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Locale;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,13 @@ public class Controller_2 {
     private EmployeeDao employeeDao;
     @Autowired
     private ResourceBundleMessageSource messageSource;
+
+    @RequestMapping("/i18n")
+    public String testI18n(Locale locale) {
+        String val = messageSource.getMessage("i18n.user", null, locale);
+        System.out.println(val);
+        return "i18n";
+    }
 
     @RequestMapping("/testUpload")
     public String testUpload(@RequestParam("desc") String desc, @RequestParam("file") MultipartFile file) throws IOException {
